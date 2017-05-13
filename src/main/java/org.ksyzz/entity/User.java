@@ -3,13 +3,14 @@ package org.ksyzz.entity;
 import org.hibernate.mapping.Constraint;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by fengqian on 2017/4/10.
  */
 @Entity
 @Table(name = "user")
-public class User {
+public class User implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
